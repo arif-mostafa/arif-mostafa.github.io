@@ -123,6 +123,11 @@
   .readout .k{color:var(--mut);text-transform:uppercase;letter-spacing:.08em;font-size:10.5px}
   .readout .v{color:var(--txt);text-align:right}
   .readout .v.acc{color:var(--acc)}
+  .panel-photo{display:flex;justify-content:center;padding:18px 0 2px}
+  .panel-photo img{width:76px;height:76px;border-radius:50%;object-fit:cover;border:2px solid var(--acc);box-shadow:0 6px 18px rgba(0,0,0,.45)}
+  .about-intro{display:grid;grid-template-columns:.8fr 1.6fr;gap:34px;align-items:center;margin:4px 0 2px}
+  .about-photo img{width:100%;max-width:270px;border-radius:16px;border:1px solid var(--line);display:block;object-fit:cover}
+  .about-intro .lead{margin-top:0}
 
   /* stats */
   .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:52px;position:relative;z-index:2}
@@ -220,6 +225,8 @@
     .ctc{grid-template-columns:repeat(2,1fr)}
     .edu{grid-template-columns:1fr}
     .kpis.k4{grid-template-columns:repeat(2,1fr)}
+    .about-intro{grid-template-columns:1fr;gap:20px}
+    .about-photo img{max-width:210px}
   }
   @media(max-width:640px){
     body{font-size:16px}
@@ -246,7 +253,7 @@
 
 <header id="hd">
   <div class="wrap nav">
-    <a href="#home" class="brand"><span class="sq"></span>ARIF<b>MOSTAFA</b></a>
+    <a href="#home" class="brand"><span class="sq"></span>ARIF <b>MOSTAFA</b></a>
     <nav class="links" id="menu">
       <a href="#about">About</a>
       <a href="#expertise">Expertise</a>
@@ -279,6 +286,7 @@
         </div>
 
         <div class="panel" aria-label="Profile index">
+          <div class="panel-photo"><img src="profile.jpg" alt="Arif Mostafa"></div>
           <div class="panel-top">
             <div class="monogram">AM</div>
             <span class="live"><i></i>Index / 2026</span>
@@ -315,7 +323,10 @@
         </div>
         <span class="idx">01 / PROFILE</span>
       </div>
-      <p class="lead">I work across the whole funnel: paid acquisition on Google and Meta, organic growth through technical and content SEO, and retention through email and CRM workflows built in GoHighLevel. That mix means campaigns aren't handed off between people — strategy, execution, tracking, and reporting stay in one pair of hands.</p>
+      <div class="about-intro">
+        <div class="about-photo"><img src="profile.jpg" alt="Arif Mostafa, Digital Marketing Specialist"></div>
+        <p class="lead">I work across the whole funnel: paid acquisition on Google and Meta, organic growth through technical and content SEO, and retention through email and CRM workflows built in GoHighLevel. That mix means campaigns aren't handed off between people — strategy, execution, tracking, and reporting stay in one pair of hands.</p>
+      </div>
       <div class="grid g3" style="margin-top:28px">
         <div class="card"><div class="ico">◧</div><h3>Data first</h3><p>Every campaign ships with GA4, Search Console, and Looker Studio reporting, so decisions come from numbers, not guesses.</p></div>
         <div class="card"><div class="ico">◈</div><h3>Built to scale</h3><p>Keyword maps, content libraries, and sales pipelines are structured so they keep working long after the first launch.</p></div>
