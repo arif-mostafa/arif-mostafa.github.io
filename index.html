@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arif Mostafa — Digital Marketing Specialist · Google Ads, Meta Ads, SEO</title>
+<meta name="description" content="Arif Mostafa is a full-stack digital marketing specialist with 4.5+ years in Google Ads, Meta Ads, SEO and marketing automation for brands in Bangladesh, the US and Canada.">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+<!-- Open Graph / social share preview — set to your live GitHub Pages URL -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Arif Mostafa — Digital Marketing Specialist">
+<meta property="og:description" content="Full-stack digital marketer: Google Ads, Meta Ads, SEO and marketing automation for US/Canada and Bangladesh brands. 4.5+ years, full-funnel.">
+<meta property="og:url" content="https://arif-mostafa.github.io/">
+<meta property="og:image" content="https://arif-mostafa.github.io/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Arif Mostafa — Digital Marketing Specialist">
+<meta name="twitter:description" content="Full-stack digital marketer: Google Ads, Meta Ads, SEO and marketing automation. 4.5+ years, full-funnel.">
+<meta name="twitter:image" content="https://arif-mostafa.github.io/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b1120;
+    --bg2:#111a2e;
+    --card:#141d33;
+    --card2:#18223d;
+    --line:#22304d;
+    --line-soft:#1a2540;
+    --txt:#e6ecf7;
+    --mut:#9aa9c4;
+    --acc:#22d3a6;
+    --acc-2:#4f8cff;
+    --acc-deep:#0f9d7e;
+    --font-display:'Space Grotesk',sans-serif;
+    --font-body:'Instrument Sans',sans-serif;
+    --font-mono:'JetBrains Mono',monospace;
+    --maxw:1120px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);color:var(--txt);
+    font-family:var(--font-body);font-size:17px;line-height:1.65;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--acc);color:#04231b}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+
+  /* eyebrow */
+  .eyebrow{
+    font-family:var(--font-mono);font-size:12px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--acc);
+    display:inline-flex;align-items:center;gap:10px;
+  }
+  .eyebrow::before{content:"";width:22px;height:1px;background:var(--acc);display:inline-block}
+
+  /* caliper ticks */
+  .ticks{
+    height:12px;
+    background-image:
+      repeating-linear-gradient(to right, var(--line) 0, var(--line) 1px, transparent 1px, transparent 12px),
+      repeating-linear-gradient(to right, rgba(34,211,166,.55) 0, rgba(34,211,166,.55) 1px, transparent 1px, transparent 60px);
+  }
+
+  /* header */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:60;
+    background:rgba(11,17,32,.82);backdrop-filter:saturate(140%) blur(12px);
+    border-bottom:1px solid transparent;transition:border-color .3s;
+  }
+  header.on{border-bottom-color:var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{font-family:var(--font-mono);font-size:13px;letter-spacing:.06em;display:flex;align-items:center;gap:9px}
+  .brand .sq{width:9px;height:9px;background:var(--acc);display:inline-block;transform:rotate(45deg)}
+  .brand b{font-weight:500}
+  .links{display:flex;gap:24px}
+  .links a{font-family:var(--font-mono);font-size:12.5px;letter-spacing:.03em;color:var(--mut);position:relative;padding:4px 0;transition:color .2s}
+  .links a:hover,.links a:focus-visible{color:var(--txt)}
+  .links a::after{content:"";position:absolute;left:0;bottom:-1px;width:0;height:1px;background:var(--acc);transition:width .25s}
+  .links a:hover::after,.links a:focus-visible::after{width:100%}
+  .burger{display:none;background:none;border:1px solid var(--line);color:var(--txt);font-family:var(--font-mono);font-size:12px;padding:7px 12px;cursor:pointer}
+
+  /* hero */
+  #home{padding:132px 0 40px;position:relative;overflow:hidden}
+  #home .glow1,#home .glow2{position:absolute;border-radius:50%;pointer-events:none;z-index:0}
+  #home .glow1{width:520px;height:520px;right:-160px;top:-140px;background:radial-gradient(circle,rgba(34,211,166,.14),transparent 65%)}
+  #home .glow2{width:460px;height:460px;left:-200px;bottom:-180px;background:radial-gradient(circle,rgba(79,140,255,.13),transparent 65%)}
+  .hero{display:grid;grid-template-columns:1.4fr .95fr;gap:50px;align-items:start;position:relative;z-index:2}
+  .badge{
+    display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);
+    background:var(--bg2);padding:6px 14px;border-radius:999px;font-size:.82rem;color:var(--mut);
+    font-family:var(--font-mono);letter-spacing:.02em;margin-bottom:22px;
+  }
+  .badge .blip{width:8px;height:8px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 0 rgba(34,211,166,.5);animation:blip 2.4s infinite}
+  @keyframes blip{0%{box-shadow:0 0 0 0 rgba(34,211,166,.45)}70%{box-shadow:0 0 0 8px rgba(34,211,166,0)}100%{box-shadow:0 0 0 0 rgba(34,211,166,0)}}
+  h1{font-family:var(--font-display);font-weight:600;font-size:clamp(2.4rem,6vw,3.9rem);line-height:1.02;letter-spacing:-.02em;margin-top:6px}
+  h1 .thin{font-weight:400;color:#c3cde0}
+  .role{margin-top:16px;font-family:var(--font-display);font-size:clamp(1.05rem,2.2vw,1.35rem);font-weight:600;
+    background:linear-gradient(90deg,var(--acc),var(--acc-2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .chan{color:var(--mut);font-family:var(--font-mono);font-size:.82rem;margin-top:8px;letter-spacing:.06em}
+  .sum{color:#c3cde0;margin-top:22px;max-width:54ch;font-size:1.02rem}
+  .cta{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
+  .btn{font-family:var(--font-mono);font-size:13px;letter-spacing:.03em;padding:13px 24px;border-radius:9px;border:1px solid transparent;cursor:pointer;transition:.22s;display:inline-flex;align-items:center;gap:9px}
+  .btn.p{background:var(--acc);color:#04231b;font-weight:500}
+  .btn.p:hover,.btn.p:focus-visible{transform:translateY(-2px);box-shadow:0 12px 28px rgba(34,211,166,.26)}
+  .btn.s{border-color:var(--line);color:var(--txt);background:var(--bg2)}
+  .btn.s:hover,.btn.s:focus-visible{border-color:var(--acc);color:var(--acc)}
+
+  /* index readout panel */
+  .panel{border:1px solid var(--line);background:linear-gradient(180deg,var(--card),#101932);border-radius:14px;overflow:hidden}
+  .panel-top{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border-bottom:1px solid var(--line);font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+  .monogram{width:34px;height:34px;border-radius:8px;display:grid;place-items:center;font-family:var(--font-display);font-weight:600;font-size:14px;color:#04231b;background:linear-gradient(140deg,var(--acc),var(--acc-2))}
+  .panel-top .live{display:flex;align-items:center;gap:7px}
+  .panel-top .live i{width:7px;height:7px;border-radius:50%;background:var(--acc);font-style:normal}
+  .readout{padding:6px 16px 14px}
+  .readout .row{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line);font-family:var(--font-mono);font-size:12.5px}
+  .readout .row:last-child{border-bottom:0}
+  .readout .k{color:var(--mut);text-transform:uppercase;letter-spacing:.08em;font-size:10.5px}
+  .readout .v{color:var(--txt);text-align:right}
+  .readout .v.acc{color:var(--acc)}
+
+  /* stats */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:52px;position:relative;z-index:2}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:22px 20px}
+  .stat .num{font-family:var(--font-mono);font-weight:500;font-size:clamp(1.7rem,3.6vw,2.4rem);line-height:1;color:var(--acc);letter-spacing:-.01em}
+  .stat .lab{font-size:.82rem;color:var(--mut);margin-top:10px;line-height:1.4}
+
+  /* section frame */
+  section{padding:78px 0}
+  .sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:34px}
+  .sec-head h2{font-family:var(--font-display);font-weight:600;font-size:clamp(1.7rem,3.6vw,2.4rem);letter-spacing:-.015em;line-height:1.08;margin-top:14px;max-width:20ch}
+  .sec-head .idx{font-family:var(--font-mono);font-size:11.5px;color:var(--mut);letter-spacing:.1em;white-space:nowrap}
+  .lead{color:var(--mut);max-width:70ch;margin-top:8px}
+
+  /* generic grids */
+  .grid{display:grid;gap:16px}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .g2{grid-template-columns:repeat(2,1fr)}
+
+  /* cards */
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;transition:transform .26s ease,border-color .26s ease}
+  .card:hover{transform:translateY(-4px);border-color:rgba(34,211,166,.5)}
+  .card .ico{width:40px;height:40px;border-radius:10px;background:rgba(34,211,166,.12);color:var(--acc);display:grid;place-items:center;font-size:1.15rem;margin-bottom:14px}
+  .card h3{font-family:var(--font-display);font-weight:600;font-size:1.08rem;margin-bottom:9px}
+  .card p{color:var(--mut);font-size:.92rem;line-height:1.55}
+  .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:15px}
+  .tag{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.03em;background:var(--bg2);border:1px solid var(--line);color:var(--mut);padding:4px 9px;border-radius:5px}
+
+  /* case studies */
+  .cs{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:26px 26px 24px;position:relative;overflow:hidden;transition:transform .26s ease,box-shadow .26s ease}
+  .cs::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--acc),var(--acc-2));transform:scaleY(0);transform-origin:top;transition:transform .3s ease}
+  .cs:hover{transform:translateY(-3px);box-shadow:0 18px 40px -26px rgba(0,0,0,.8)}
+  .cs:hover::before{transform:scaleY(1)}
+  .cs .who{color:var(--acc);font-family:var(--font-mono);font-size:.74rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase}
+  .cs h3{font-family:var(--font-display);font-weight:600;font-size:1.18rem;margin:8px 0 12px;line-height:1.25}
+  .cs > p{color:var(--mut);font-size:.94rem;line-height:1.55}
+  .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin:18px 0 6px}
+  .kpis.k4{grid-template-columns:repeat(4,1fr)}
+  .kpi{background:var(--bg2);border:1px solid var(--line);border-radius:11px;padding:14px;text-align:center}
+  .kpi b{display:block;font-family:var(--font-mono);font-weight:500;color:var(--acc);font-size:1.15rem}
+  .kpi span{display:block;font-size:.7rem;color:var(--mut);line-height:1.4;margin-top:6px}
+  .cs ul{margin:14px 0 0;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+  .cs li{color:var(--mut);font-size:.9rem;line-height:1.5;padding-left:18px;position:relative}
+  .cs li::before{content:"";position:absolute;left:0;top:9px;width:8px;height:1px;background:var(--acc)}
+
+  /* timeline */
+  .tl{margin-top:8px;border-left:2px solid var(--line);padding-left:28px}
+  .job{position:relative;padding-bottom:34px}
+  .job:last-child{padding-bottom:0}
+  .job::before{content:"";position:absolute;left:-35px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--acc);border:3px solid var(--bg)}
+  .job .when{font-family:var(--font-mono);font-size:.76rem;color:var(--acc);letter-spacing:.05em}
+  .job h3{font-family:var(--font-display);font-weight:600;font-size:1.1rem;margin:6px 0 2px}
+  .job .co{color:var(--mut);font-size:.9rem;margin-bottom:12px}
+  .job ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+  .job li{color:var(--mut);font-size:.9rem;line-height:1.5;padding-left:18px;position:relative}
+  .job li::before{content:"";position:absolute;left:0;top:9px;width:8px;height:1px;background:var(--acc)}
+
+  /* certs */
+  .certs{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:8px}
+  .cert{display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+  .cert .ck{width:26px;height:26px;border-radius:7px;flex:none;display:grid;place-items:center;background:rgba(34,211,166,.14);color:var(--acc);font-size:.85rem}
+  .cert b{font-family:var(--font-display);font-size:.98rem;font-weight:600;display:block}
+  .cert span{font-size:.8rem;color:var(--mut);display:block;margin-top:2px}
+  .cert .prog{color:var(--acc-2)}
+  .subhead{font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin:36px 0 14px;display:flex;align-items:center;gap:10px}
+  .subhead::before{content:"";width:20px;height:1px;background:var(--acc);display:inline-block}
+  .edu{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  .edu .e{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+  .edu .e b{font-family:var(--font-display);font-weight:600;font-size:.98rem;display:block}
+  .edu .e span{font-size:.8rem;color:var(--mut);display:block;margin-top:3px}
+
+  /* contact */
+  #contact{background:var(--bg2);border-top:1px solid var(--line)}
+  .ctc{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:30px}
+  .ctc .cx{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:22px;transition:transform .24s ease,border-color .24s ease;display:block}
+  a.cx:hover{border-color:var(--acc);transform:translateY(-3px)}
+  .ctc .lbl{font-family:var(--font-mono);font-size:.7rem;color:var(--mut);text-transform:uppercase;letter-spacing:.12em;margin-bottom:8px}
+  .ctc .val{font-size:.98rem;word-break:break-word}
+  .ctc .val.acc{color:var(--acc)}
+
+  footer{border-top:1px solid var(--line);padding:24px 0 38px}
+  .foot{display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:var(--font-mono);font-size:11.5px;color:var(--mut);letter-spacing:.04em}
+
+  /* reveal */
+  .rv{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
+  .rv.in{opacity:1;transform:none}
+
+  /* responsive */
+  @media(max-width:900px){
+    .hero{grid-template-columns:1fr;gap:34px}
+    .g3{grid-template-columns:repeat(2,1fr)}
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .grid.case-grid{grid-template-columns:1fr}
+    .certs{grid-template-columns:1fr}
+    .ctc{grid-template-columns:repeat(2,1fr)}
+    .edu{grid-template-columns:1fr}
+    .kpis.k4{grid-template-columns:repeat(2,1fr)}
+  }
+  @media(max-width:640px){
+    body{font-size:16px}
+    .links{display:none;position:fixed;top:64px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg2);border-bottom:1px solid var(--line)}
+    .links.open{display:flex}
+    .links.open a{padding:15px 26px;border-top:1px solid var(--line);font-size:13.5px}
+    .burger{display:inline-block}
+    .g3{grid-template-columns:1fr}
+    .stats{grid-template-columns:1fr 1fr}
+    .kpis,.kpis.k4{grid-template-columns:1fr}
+    .ctc{grid-template-columns:1fr}
+    .sec-head{flex-direction:column;align-items:flex-start;gap:6px}
+    section{padding:60px 0}
+    #home{padding:110px 0 30px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+    .rv{opacity:1;transform:none}
+  }
+  :focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<header id="hd">
+  <div class="wrap nav">
+    <a href="#home" class="brand"><span class="sq"></span>ARIF&nbsp;<b>MOSTAFA</b></a>
+    <nav class="links" id="menu">
+      <a href="#about">About</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#work">Case Studies</a>
+      <a href="#experience">Experience</a>
+      <a href="#certs">Certifications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="burger" id="bg" aria-label="Toggle menu">MENU</button>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section id="home">
+    <span class="glow1"></span><span class="glow2"></span>
+    <div class="wrap">
+      <div class="hero">
+        <div>
+          <span class="badge"><span class="blip"></span>Available for new projects</span>
+          <h1>Marketing that is<br><span class="thin">measured in results.</span></h1>
+          <div class="role">Full-Stack Digital Marketing Specialist</div>
+          <div class="chan">Google Ads · Meta Ads · SEO · Marketing Automation</div>
+          <p class="sum">I'm Arif Mostafa, a digital marketer with 4.5+ years running paid media, SEO, and CRM automation for brands in Bangladesh and for US/Canada-facing clients. I own campaigns end to end — from keyword and audience research to landing-page recommendations, analytics, and biweekly reporting.</p>
+          <div class="cta">
+            <a class="btn p" href="#work">View case studies</a>
+            <a class="btn s" href="mailto:arifmostafa.bd@gmail.com">Get in touch</a>
+            <a class="btn s" href="Arif-Mostafa-CV.pdf" download>Download CV</a>
+          </div>
+        </div>
+
+        <div class="panel" aria-label="Profile index">
+          <div class="panel-top">
+            <div class="monogram">AM</div>
+            <span class="live"><i></i>Index / 2026</span>
+          </div>
+          <div class="readout">
+            <div class="row"><span class="k">Role</span><span class="v">Digital Marketing Specialist</span></div>
+            <div class="row"><span class="k">Experience</span><span class="v acc">4.5+ years</span></div>
+            <div class="row"><span class="k">Channels</span><span class="v">Google · Meta · SEO</span></div>
+            <div class="row"><span class="k">Systems</span><span class="v">GoHighLevel</span></div>
+            <div class="row"><span class="k">Markets</span><span class="v">US / CA · BD</span></div>
+            <div class="row"><span class="k">Based</span><span class="v">Dhaka, Bangladesh</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats" id="stats">
+        <div class="stat"><div class="num" data-count="4.5" data-suffix="+">0</div><div class="lab">Years in digital marketing</div></div>
+        <div class="stat"><div class="num" data-count="14" data-suffix="">0</div><div class="lab">Google &amp; Meta ad accounts managed</div></div>
+        <div class="stat"><div class="num" data-count="23" data-suffix="">0</div><div class="lab">Keywords ranked in top 10</div></div>
+        <div class="stat"><div class="num" data-count="55" data-prefix="+" data-suffix="%">0</div><div class="lab">Search impressions growth</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="ticks"></div></div>
+
+  <!-- ABOUT -->
+  <section id="about" class="rv">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow">About</span>
+          <h2>Full-funnel marketer, not a single-channel specialist.</h2>
+        </div>
+        <span class="idx">01 / PROFILE</span>
+      </div>
+      <p class="lead">I work across the whole funnel: paid acquisition on Google and Meta, organic growth through technical and content SEO, and retention through email and CRM workflows built in GoHighLevel. That mix means campaigns aren't handed off between people — strategy, execution, tracking, and reporting stay in one pair of hands.</p>
+      <div class="grid g3" style="margin-top:28px">
+        <div class="card"><div class="ico">◧</div><h3>Data first</h3><p>Every campaign ships with GA4, Search Console, and Looker Studio reporting, so decisions come from numbers, not guesses.</p></div>
+        <div class="card"><div class="ico">◈</div><h3>Built to scale</h3><p>Keyword maps, content libraries, and sales pipelines are structured so they keep working long after the first launch.</p></div>
+        <div class="card"><div class="ico">◍</div><h3>Clear reporting</h3><p>Biweekly performance reports in plain language: what was spent, what it returned, and what changes next.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERTISE -->
+  <section id="expertise" class="rv">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow">Expertise</span>
+          <h2>Core competencies.</h2>
+        </div>
+        <span class="idx">02 / STACK</span>
+      </div>
+      <div class="grid g3">
+        <div class="card"><div class="ico">◎</div><h3>Paid Media</h3><p>Google Ads and Meta (Facebook/Instagram) Ads, A/B and audience testing, retargeting and remarketing, budget and CPL management.</p><div class="tags"><span class="tag">Google Ads</span><span class="tag">Meta Ads</span><span class="tag">Retargeting</span><span class="tag">CPL</span></div></div>
+        <div class="card"><div class="ico">⌘</div><h3>SEO</h3><p>On-page and off-page SEO, technical audits, keyword research and mapping, content optimization, local SEO, and backlinks.</p><div class="tags"><span class="tag">Technical SEO</span><span class="tag">Local SEO</span><span class="tag">Keyword mapping</span></div></div>
+        <div class="card"><div class="ico">⚙</div><h3>Automation &amp; CRM</h3><p>GoHighLevel pipelines, workflows, calendars and reputation management, email marketing, and lead-funnel design.</p><div class="tags"><span class="tag">GoHighLevel</span><span class="tag">Workflows</span><span class="tag">Email</span></div></div>
+        <div class="card"><div class="ico">✎</div><h3>Content &amp; Social</h3><p>SEO-driven content marketing and social management across Facebook, Instagram, LinkedIn, and Pinterest, with on-brand creative in Canva.</p><div class="tags"><span class="tag">Content strategy</span><span class="tag">Social media</span><span class="tag">Canva</span></div></div>
+        <div class="card"><div class="ico">▲</div><h3>Analytics &amp; Reporting</h3><p>GA4, Google Search Console, Looker Studio, PostHog, and Screaming Frog for tracking, auditing, and performance reporting.</p><div class="tags"><span class="tag">GA4</span><span class="tag">Looker Studio</span><span class="tag">GSC</span><span class="tag">GTM</span></div></div>
+        <div class="card"><div class="ico">◆</div><h3>Tools</h3><p>SEMrush, Ahrefs, Moz, Ubersuggest, Screaming Frog, WordPress, Framer, and Google Tag Manager.</p><div class="tags"><span class="tag">SEMrush</span><span class="tag">Ahrefs</span><span class="tag">WordPress</span><span class="tag">Framer</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="ticks"></div></div>
+
+  <!-- CASE STUDIES -->
+  <section id="work" class="rv">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow">Case Studies</span>
+          <h2>Selected work &amp; results.</h2>
+        </div>
+        <span class="idx">03 / WORK</span>
+      </div>
+      <p class="lead">Client names are kept general where the work is confidential. Figures come from platform reporting over the periods stated.</p>
+      <div class="grid case-grid" style="margin-top:28px">
+        <article class="cs">
+          <div class="who">Dental lab brand — US &amp; Canada</div>
+          <h3>Full-funnel launch: SEO content engine + paid social + CRM</h3>
+          <p>Owned end-to-end marketing for a dental-lab brand serving US and Canadian clinics: keyword strategy, content, on-page SEO, paid social, and CRM automation — built for both traditional search and AI answer engines.</p>
+          <div class="kpis">
+            <div class="kpi"><b>74</b><span>SEO/AEO articles mapped to a verified 73-keyword set</span></div>
+            <div class="kpi"><b>8-stage</b><span>GoHighLevel sales pipeline built from scratch</span></div>
+            <div class="kpi"><b>2</b><span>Live Meta ad accounts, biweekly reporting</span></div>
+          </div>
+          <ul>
+            <li>Built a GoHighLevel production sub-account: lead follow-up and review-request workflows, calendar booking, and Google Business Profile integration.</li>
+            <li>Ran awareness and retargeting campaigns across the dental-lab brand and an auto-service client.</li>
+            <li>Managed local SEO for three additional dental clinics, including GeoGrid rank tracking and Business Profile optimization.</li>
+          </ul>
+          <div class="tags"><span class="tag">SEO</span><span class="tag">Meta Ads</span><span class="tag">GoHighLevel</span><span class="tag">Local SEO</span></div>
+        </article>
+
+        <article class="cs">
+          <div class="who">Agency client portfolio — 3D WebMasters</div>
+          <h3>Paid search &amp; social at scale across 14 accounts</h3>
+          <p>Handled SEO and paid-ads execution and reporting across 6 Google Ads and 8 Meta Ads accounts, with monthly budgets from $1,000 to $3,500 per account.</p>
+          <div class="kpis k4">
+            <div class="kpi"><b>~35/mo</b><span>Leads from Google Ads</span></div>
+            <div class="kpi"><b>~50/mo</b><span>Leads from Meta Ads</span></div>
+            <div class="kpi"><b>~500</b><span>Total leads over the 6-month engagement</span></div>
+            <div class="kpi"><b>-15%</b><span>Meta cost per lead within 3 weeks</span></div>
+          </div>
+          <ul>
+            <li>Google Ads: search-term cleanup, keyword refinement, and ad testing produced roughly 35 leads per month.</li>
+            <li>Meta Ads: audience and creative testing cut CPL by 15% while delivering about 50 leads per month.</li>
+            <li>SEO: updated 10 priority pages and refreshed 100 content pieces, lifting impressions 55% and ranking 7 keywords in the top 10.</li>
+          </ul>
+          <div class="tags"><span class="tag">Google Ads</span><span class="tag">Meta Ads</span><span class="tag">CRO</span><span class="tag">Reporting</span></div>
+        </article>
+
+        <article class="cs">
+          <div class="who">Custom apparel manufacturer — Minmaxst Textile</div>
+          <h3>Ranking a B2B manufacturer for competitive commercial terms</h3>
+          <p>Owned SEO and digital marketing for local and international (US/EU) audiences, mapping keywords to the right pages and rebuilding the content library.</p>
+          <div class="kpis">
+            <div class="kpi"><b>23</b><span>Keywords in Google top 10, incl. commercial terms</span></div>
+            <div class="kpi"><b>~11.2K</b><span>Backlinks from about 779 referring domains</span></div>
+            <div class="kpi"><b>~1.1K</b><span>Monthly organic sessions (SEMrush snapshot)</span></div>
+          </div>
+          <ul>
+            <li>Optimized 30 priority pages and refreshed 250 content assets, driving +55% impressions and +25% organic traffic.</li>
+            <li>Grew overall site traffic by 15% while expanding into international markets.</li>
+            <li>Ran content across Instagram, Facebook, LinkedIn, and Pinterest, improving engagement by 25%.</li>
+          </ul>
+          <div class="tags"><span class="tag">SEO</span><span class="tag">Content</span><span class="tag">Link building</span><span class="tag">Social</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="rv">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow">Experience</span>
+          <h2>Where I've worked.</h2>
+        </div>
+        <span class="idx">04 / TIMELINE</span>
+      </div>
+      <div class="tl">
+        <div class="job">
+          <div class="when">Jan 2026 — Present</div>
+          <h3>Digital Marketing Specialist</h3>
+          <div class="co">Dentallab.com — Bangladesh (US/Canada dental &amp; auto-service clients)</div>
+          <ul>
+            <li>Own end-to-end marketing and SEO for a US/Canada dental-lab brand: keyword strategy, content, on-page SEO, paid social, and CRM automation.</li>
+            <li>Building a 74-article SEO/AEO/GEO content library mapped to a verified 73-keyword research set in SEMrush.</li>
+            <li>Manage two live Meta ad accounts with awareness and retargeting campaigns on a biweekly reporting cadence.</li>
+            <li>Built a GoHighLevel production sub-account from scratch with an 8-stage sales pipeline, review-request workflows, and calendar booking.</li>
+            <li>Run local SEO for three additional dental-clinic clients, including GeoGrid rank tracking and Business Profile optimization.</li>
+          </ul>
+        </div>
+        <div class="job">
+          <div class="when">Jul 2025 — Dec 2025</div>
+          <h3>SEO &amp; Google Ads Executive</h3>
+          <div class="co">3D WebMasters — Bangladesh</div>
+          <ul>
+            <li>Ran SEO and paid-ads execution and reporting across 6 Google Ads and 8 Meta Ads accounts.</li>
+            <li>Google Ads: managed $1,500–$3,500/month, generating roughly 35 leads/month through search-term cleanup, keyword refinement, and ad testing.</li>
+            <li>Meta Ads: managed $1,000–$2,000/month, generating about 50 leads/month and cutting CPL by 15% in three weeks.</li>
+            <li>SEO: updated 10 priority pages and refreshed 100 content pieces, driving +25% organic traffic, +55% impressions, and 7 top-10 keywords.</li>
+          </ul>
+        </div>
+        <div class="job">
+          <div class="when">Dec 2023 — Jun 2025</div>
+          <h3>SEO &amp; Digital Marketing Executive</h3>
+          <div class="co">Minmaxst Textile — Bangladesh (local + international markets)</div>
+          <ul>
+            <li>Owned SEO and digital marketing across local and international (US/EU) audiences, growing site traffic by 15%.</li>
+            <li>Achieved Google first-page rankings for competitive terms by mapping keywords to the right pages, optimizing 30 priority pages and refreshing 250 content assets.</li>
+            <li>Ran content across Instagram, Facebook, LinkedIn, and Pinterest, lifting engagement by 25%.</li>
+          </ul>
+        </div>
+        <div class="job">
+          <div class="when">Sep 2022 — Oct 2023</div>
+          <h3>Content Writer &amp; Digital Marketing Assistant</h3>
+          <div class="co">Tech-Que IT — Dhaka, Bangladesh</div>
+          <ul>
+            <li>Supported SEO through keyword research, on-page updates, metadata improvements, and content writing.</li>
+            <li>Created and scheduled optimized content and social posts, improving site visibility by 10%.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certs" class="rv">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow">Credentials</span>
+          <h2>Certifications &amp; education.</h2>
+        </div>
+        <span class="idx">05 / CREDENTIALS</span>
+      </div>
+      <div class="certs">
+        <div class="cert"><span class="ck">✓</span><div><b>NSDA Digital Marketing — Level 3</b><span>NTVQF / BTEB · Certified</span></div></div>
+        <div class="cert"><span class="ck">✓</span><div><b>GoHighLevel Masterclass: From Beginner to Expert</b><span>Udemy · Apr 2026</span></div></div>
+        <div class="cert"><span class="ck">✓</span><div><b>AI-Driven Google Ads Mastery</b><span>Skilluper · Aug 2025</span></div></div>
+        <div class="cert"><span class="ck">✓</span><div><b>Google Digital Marketing Course</b><span>Google · Sep 2024</span></div></div>
+        <div class="cert"><span class="ck">✓</span><div><b>LinkedIn SEO Course for Beginners</b><span>LinkedIn · Jan 2023</span></div></div>
+        <div class="cert"><span class="ck">✓</span><div><b>Professional Digital Marketing</b><span>SEIP, BITM · Oct 2022</span></div></div>
+        <div class="cert"><span class="ck">✓</span><div><b>English Communication Skills</b><span>SEIP, WSDA NZ · Nov 2022</span></div></div>
+      </div>
+      <div class="subhead">Education</div>
+      <div class="edu">
+        <div class="e"><b>B.Sc. in Chemistry</b><span>University of Chittagong</span></div>
+        <div class="e"><b>H.S.C. (Science)</b><span>Adamjee Cantonment College, Dhaka</span></div>
+      </div>
+      <div class="subhead">Languages</div>
+      <div class="edu">
+        <div class="e"><b>Bengali</b><span>Native</span></div>
+        <div class="e"><b>English</b><span>Professional working proficiency</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- CONTACT -->
+<section id="contact" class="rv">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow">Contact</span>
+        <h2>Let's talk growth.</h2>
+      </div>
+      <span class="idx">06 / CONTACT</span>
+    </div>
+    <p class="lead">Open to digital-marketing roles and freelance projects — paid media, SEO, and marketing automation for B2B and service brands.</p>
+    <div class="ctc">
+      <a class="cx" href="mailto:arifmostafa.bd@gmail.com">
+        <div class="lbl">Email</div>
+        <div class="val acc">arifmostafa.bd@gmail.com</div>
+      </a>
+      <a class="cx" href="https://www.linkedin.com/in/arif-mostafa-cu/" target="_blank" rel="noopener">
+        <div class="lbl">LinkedIn</div>
+        <div class="val acc">/in/arif-mostafa-cu</div>
+      </a>
+      <a class="cx" href="tel:+8801897978605">
+        <div class="lbl">Phone</div>
+        <div class="val">+880 1897 978605</div>
+      </a>
+      <div class="cx">
+        <div class="lbl">Location</div>
+        <div class="val">Dhaka, Bangladesh · US/CA hours</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="ticks" style="margin-bottom:22px"></div>
+    <div class="foot">
+      <span>© 2026 ARIF MOSTAFA</span>
+      <span>DIGITAL MARKETING · PAID · SEO · AUTOMATION</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // header shadow on scroll
+  var hd=document.getElementById('hd');
+  window.addEventListener('scroll',function(){hd.classList.toggle('on',window.scrollY>10)});
+
+  // mobile menu
+  var bg=document.getElementById('bg'),menu=document.getElementById('menu');
+  bg.addEventListener('click',function(){menu.classList.toggle('open')});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open')})});
+
+  // reveal on scroll
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+
+  // count-up
+  var reduce=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  function countUp(el){
+    var raw=el.getAttribute('data-count');
+    var target=parseFloat(raw);
+    var dec=raw.indexOf('.')>-1?1:0;
+    var pre=el.getAttribute('data-prefix')||'';
+    var suf=el.getAttribute('data-suffix')||'';
+    var dur=1200,start=null;
+    function step(ts){if(!start)start=ts;var p=Math.min((ts-start)/dur,1);var e=1-Math.pow(1-p,3);el.textContent=pre+(e*target).toFixed(dec)+suf;if(p<1)requestAnimationFrame(step)}
+    requestAnimationFrame(step);
+  }
+  var sio=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){
+    e.target.querySelectorAll('.num').forEach(function(n){
+      if(reduce){n.textContent=(n.getAttribute('data-prefix')||'')+n.getAttribute('data-count')+(n.getAttribute('data-suffix')||'')}
+      else{countUp(n)}
+    });sio.unobserve(e.target);
+  }})},{threshold:.4});
+  var s=document.getElementById('stats');if(s)sio.observe(s);
+</script>
+<!-- Google Analytics 4 — Measurement ID for arif-mostafa.github.io -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YEPECVVFXM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YEPECVVFXM');
+</script>
+</body>
+</html>
